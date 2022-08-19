@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "weather-app"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-iz84ecvx4soc"
+s3_prefix = "weather-app"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "apiKey=\"4f5bbe62da6c1ad3ceab707dd37cfb78\""
+image_repositories = []
