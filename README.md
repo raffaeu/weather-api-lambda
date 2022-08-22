@@ -7,7 +7,7 @@ that you can consume. Below you can find details about the APIs:
 
 ### Find a City
 
-**URL**: (https://dieznakwvj.execute-api.us-east-1.amazonaws.com/Prod/)[https://dieznakwvj.execute-api.us-east-1.amazonaws.com/Prod/]
+**URL**: [https://dieznakwvj.execute-api.us-east-1.amazonaws.com/Prod/](https://dieznakwvj.execute-api.us-east-1.amazonaws.com/Prod/)
 
 **Query Params**
 
@@ -35,7 +35,7 @@ parameter |
 
 ### Get Weather for a City
 
-**URL**: https://xzvfcjx223.execute-api.us-east-1.amazonaws.com/Prod/getWeather
+**URL**: [https://dieznakwvj.execute-api.us-east-1.amazonaws.com/Prod/](https://dieznakwvj.execute-api.us-east-1.amazonaws.com/Prod/)
 
 **Query Params**
 
