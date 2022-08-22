@@ -8,6 +8,6 @@ s3_prefix = "weather-app"
 region = "us-east-1"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
+disable_rollback = true
 parameter_overrides = "apiKey=\"4f5bbe62da6c1ad3ceab707dd37cfb78\""
 image_repositories = []
-disable_rollback = true

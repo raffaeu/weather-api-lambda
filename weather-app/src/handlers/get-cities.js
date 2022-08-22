@@ -27,11 +27,16 @@ export const getCities = async (event) => {
             country: city.country,
             state: city.state
         }))
-        .sort((a,b) => a.name - b.name);;
+        .sort((a, b) => a.name - b.name);;
 
     // response
     const apIresponse = {
         statusCode: 200,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'content-type',
+            'Access-Control-Allow-Methods': 'GET, OPTIONS',
+        },
         body: JSON.stringify(cities)
     };
 

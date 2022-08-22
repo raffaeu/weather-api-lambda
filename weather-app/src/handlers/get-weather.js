@@ -27,7 +27,7 @@ export const getWeather = async (event) => {
         name: forecasts.city.name,
         country: forecasts.city.country,
         forecast: forecasts.list.map(day => ({
-            date: new Date(day.dt * 1000).toLocaleString('en-US', {hour12: false}),
+            date: new Date(day.dt * 1000).toLocaleString('en-US', { hour12: false }),
             temperature: day.temp.day,
             minimum: day.temp.min,
             maximum: day.temp.max,
@@ -43,6 +43,11 @@ export const getWeather = async (event) => {
     // response
     const apIresponse = {
         statusCode: 200,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'content-type',
+            'Access-Control-Allow-Methods': 'GET, OPTIONS',
+        },
         body: JSON.stringify(weather)
     };
 
