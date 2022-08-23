@@ -7,11 +7,31 @@ import fetch from 'node-fetch';
 export const getCities = async (event) => {
 
     if (event.httpMethod !== 'GET') {
-        throw new Error(`getMethod only accept GET method, you tried: ${event.httpMethod}`);
+        return {
+            statusCode: 400,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'content-type',
+                'Access-Control-Allow-Methods': 'GET, OPTIONS',
+            },
+            body: JSON.stringify({
+                error: 'Please provide a GET method'
+            })
+        }
     }
 
     if (event.queryStringParameters === null || event.queryStringParameters.filter === null) {
-        throw new Error(`You must provide a Query Parameter of type filter`);
+        return {
+            statusCode: 400,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'content-type',
+                'Access-Control-Allow-Methods': 'GET, OPTIONS',
+            },
+            body: JSON.stringify({
+                error: 'Please provide a query parameter ? filter'
+            })
+        }
     }
 
     // Get the filter
@@ -25,7 +45,8 @@ export const getCities = async (event) => {
         .map(city => ({
             name: city.name,
             country: city.country,
-            state: city.state
+            state: city.state,
+            flag: `https://countryflagsapi.com/png/${city.country}`
         }))
         .sort((a, b) => a.name - b.name);;
 
