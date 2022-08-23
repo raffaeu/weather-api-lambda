@@ -13,8 +13,7 @@ that you can consume. Below you can find details about the APIs:
 
 | Name | Type | Example | Description | 
 | :--- | :--- | :--- | :--- |
-| filter | `string` | `?filter=Milano` | Returns a List of Cities based on a Filter
-parameter |
+| filter | `string` | `?filter=Milano` | Returns a List of Cities based on a Filter parameter |
 
 **Output JSON**
 
@@ -61,8 +60,7 @@ parameter |
 
 | Name | Type | Example | Description | 
 | :--- | :--- | :--- | :--- |
-| filter | `string` | `?filter=Milano` | Returns a List of Cities based on a Filter
-parameter |
+| filter | `string` | `?filter=Milano` | Returns a List of Cities based on a Filter parameter |
 
 **Output JSON**
 
